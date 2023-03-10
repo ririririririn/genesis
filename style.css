@@ -1,0 +1,38 @@
+/* 기본 스타일 제거 */
+h1,
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+
+/* navbar */
+.header {
+  height: 69px;
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+.nav_gnb {
+}
+ul li {
+  display: inline-block;
+}
+.nav_gnb {
+}
+.nav_gnb1,
+.nav_gnb2 {
+  display: inline-block;
+}
+.nav_gnb1 {
+}
+.nav_gnb2 {
+}
