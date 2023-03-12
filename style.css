@@ -16,23 +16,85 @@ ul {
 
 /* navbar */
 .header {
-  height: 69px;
   background-color: black;
+  color: #BBBBBB;
+}
+.navbar{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 6px 50px;
+  font-size: 14px;
+}
+
+.gnb{
+  display: flex;
+  align-items: center;
+}
+/* 로고 */
+.logo{
+  margin-right: 20px;
+}
+.logo img{
+  width: 120px;
+  display: block;
+}
+
+/* nav_menu */
+.nav_menu{
+  display: flex;
+  
+}
+.nav_menu li a{
+  padding: 20px 20px;
+}
+
+
+/* nav_icons */
+.nav_icons{
+  display: flex;
+  align-items: center;
+}
+
+.nav_icons li a{
+  padding: 20px 20px;
+}
+
+.nav_icons i{
+  font-size:18px;
   color: white;
-  width: 100%;
 }
-.nav_gnb {
+
+.icon_service,.icon_mypage{
+  display: none;
 }
-ul li {
+/* 햄버거 버튼 */
+.btn_hamburgur,.btn_hamburgur span{
   display: inline-block;
+  background-color: yellowgreen;
+  box-sizing: border-box;
 }
-.nav_gnb {
+
+.btn_hamburgur{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  vertical-align: bottom;
 }
-.nav_gnb1,
-.nav_gnb2 {
-  display: inline-block;
+.btn_hamburgur span{}
+.btn_hamburgur span :nth-child(1){}
+.btn_hamburgur span :nth-child(2){}
+
+@media screen and (max-width: 1359px){
+/* navbar_메뉴 아이콘 */
+.nav_icons li{
+  padding: 10px 10px;
 }
-.nav_gnb1 {
+  .text_service,.text_mypage{
+  display: none;
 }
-.nav_gnb2 {
+.icon_service,.icon_mypage{
+  display: block;
 }
+
+ }
