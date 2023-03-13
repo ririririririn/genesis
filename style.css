@@ -13,18 +13,20 @@ a {
 ul {
   list-style: none;
 }
-
+/* 폰트 */
+*{font-family: 'Noto Sans KR', sans-serif;}
 /* navbar */
 .header {
   background-color: black;
   color: #bbbbbb;
+  font-size: 15px;
 }
 .navbar {
   display: flex; /* 가로로 정렬 */
   justify-content: space-between; /* 좌우 끝으로 */
   align-items: center; /* 세로 간격 맞춤 */
   padding: 10px 40px; /* navbar 여백 */
-  font-size: 14px;
+  
 }
 
 .gnb {
@@ -63,9 +65,18 @@ ul {
   padding: 20px;
 }
 
+.icon_search{
+  padding-right: 5px;
+}
 .icon_search::after {
   content: "";
-  background-color: #222;
+  float: right;
+  display: block;
+  width: 1px;
+  height: 20px;
+  background-color: #454545;
+  margin-left: 25px;
+
 }
 
 .nav_icons i {
@@ -81,6 +92,7 @@ ul {
 
 .hamburgur {
 }
+
 .line_wrap {
   width: 25px;
   height: 25px;
@@ -94,6 +106,8 @@ ul {
   height: 3px;
   background-color: #fff;
   border-radius: 1px;
+ transition: all 1s;
+  
 }
 .line1 {
   top: 5.5px;
@@ -101,6 +115,16 @@ ul {
 .line2 {
   bottom: 5.5px;
 }
+
+/* 햄버거 active */
+
+.active_hbgbtn1{
+  transform: translateY(5.5px) rotate(45deg);
+}
+.active_hbgbtn2{
+  transform:translateY(-5.5px) rotate(-45deg);
+}
+
 
 @media screen and (max-width: 1359px) {
   navbar_메뉴 아이콘 .nav_icons li a {
