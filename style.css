@@ -2,7 +2,7 @@
 h1,
 body,
 ul,
-li {
+l {
   margin: 0;
   padding: 0;
 }
@@ -17,84 +17,122 @@ ul {
 /* navbar */
 .header {
   background-color: black;
-  color: #BBBBBB;
+  color: #bbbbbb;
 }
-.navbar{
-  display: flex;
-  justify-content:space-between;
-  align-items: center;
-  padding: 6px 50px;
+.navbar {
+  display: flex; /* 가로로 정렬 */
+  justify-content: space-between; /* 좌우 끝으로 */
+  align-items: center; /* 세로 간격 맞춤 */
+  padding: 10px 40px; /* navbar 여백 */
   font-size: 14px;
 }
 
-.gnb{
+.gnb {
   display: flex;
   align-items: center;
 }
 /* 로고 */
-.logo{
-  margin-right: 20px;
+.logo {
+  margin-right: 20px; /* 메뉴와 간격주기 */
 }
-.logo img{
+.logo img {
   width: 120px;
-  display: block;
+  display: block; /* 이미지 공백 제거 */
 }
 
 /* nav_menu */
-.nav_menu{
+.nav_menu {
   display: flex;
-  
 }
-.nav_menu li a{
-  padding: 20px 20px;
+.nav_menu li a {
+  display: block; /*  */
+  padding: 20px 20px; /* 마우스 터치 쉽게 */
 }
-
 
 /* nav_icons */
-.nav_icons{
+.nav_icons {
   display: flex;
   align-items: center;
 }
 
-.nav_icons li a{
-  padding: 20px 20px;
+.text_service,
+.text_mypage,
+.icon_search,
+.hamburger {
+  display: block; /*  */
+  padding: 20px;
 }
 
-.nav_icons i{
-  font-size:18px;
+.icon_search::after {
+  content: "";
+  background-color: #222;
+}
+
+.nav_icons i {
+  font-size: 18px;
   color: white;
 }
 
-.icon_service,.icon_mypage{
+/* 아이콘 숨김  */
+.blind {
   display: none;
 }
 /* 햄버거 버튼 */
-.btn_hamburgur,.btn_hamburgur span{
-  display: inline-block;
-  background-color: yellowgreen;
-  box-sizing: border-box;
-}
 
-.btn_hamburgur{
+.hamburgur {
+}
+.line_wrap {
+  width: 25px;
+  height: 25px;
+
   position: relative;
-  width: 30px;
-  height: 30px;
-  vertical-align: bottom;
 }
-.btn_hamburgur span{}
-.btn_hamburgur span :nth-child(1){}
-.btn_hamburgur span :nth-child(2){}
-
-@media screen and (max-width: 1359px){
-/* navbar_메뉴 아이콘 */
-.nav_icons li{
-  padding: 10px 10px;
-}
-  .text_service,.text_mypage{
-  display: none;
-}
-.icon_service,.icon_mypage{
+.line {
   display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 1px;
+}
+.line1 {
+  top: 5.5px;
+}
+.line2 {
+  bottom: 5.5px;
 }
 
- }
+@media screen and (max-width: 1359px) {
+  navbar_메뉴 아이콘 .nav_icons li a {
+    padding: 20px 10px;
+  }
+
+  .text_service,
+  .text_mypage {
+    display: none;
+  }
+  .icon_service,
+  .icon_mypage {
+    display: block;
+    padding: 20px 10px;
+  }
+
+  .icon_search {
+    padding: 20px 10px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .nav_menu {
+    display: none;
+  }
+
+  .icon_search,
+  .icon_service {
+    display: none;
+  }
+
+  .navbar {
+    padding: 0 20px;
+  }
+}
