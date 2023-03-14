@@ -27,7 +27,7 @@ ul {
 .header {
   background-color: black; /* header 배경색 */
   color: #bbbbbb; /* header 폰트색 */
-  font-size: 15px; /* header 폰트 사이즈 */
+  font-size: 1.2rem; /* header 폰트 사이즈 */
 }
 /* navbar 레이아웃 */
 .navbar {
@@ -55,7 +55,7 @@ ul {
   display: flex; /* li 가로 정렬 */
 }
 .nav_menu li a {
-  display: block; /* a block ? */
+  display: block; /* a block  */
   padding: 20px; /* a 마우스 터치 쉽게 공간 만들기 & 크기 키우기 */
   transition: color 0.5s;
 }
@@ -92,7 +92,7 @@ a:hover {
 }
 
 .nav_icons i {
-  font-size: 18px; /* 폰트어썸 아이콘 사이즈 */
+  font-size: 1.3rem; /* 폰트어썸 아이콘 사이즈 */
   color: white; /* 폰트어썸 컬러 */
 }
 
@@ -124,7 +124,7 @@ a:hover {
   /* line2 위치 지정 */
 }
 
-/* 햄버거 active */
+/* 햄버거 active X 만들기 */
 
 .active_hbgbtn1 {
   transform: translateY(5.5px) rotate(45deg);
@@ -132,6 +132,105 @@ a:hover {
 .active_hbgbtn2 {
   transform: translateY(-5.5px) rotate(-45deg);
 }
+
+
+
+/* 슬라이드 */
+
+.slider{
+  
+
+}
+
+.slides{
+  display: flex;
+/* overflow: hidden; */
+position: relative;
+}
+
+
+.slide_item{
+border: 3px solid #f00;
+/* width: 100%; */
+z-index: 1;
+
+}
+.slide_item img{
+  display: block;
+  transform: translateX(-400px);
+
+}
+
+
+.btn_pagenation{
+  position: absolute;
+  display: flex;
+  border:  solid #000;
+  z-index: 99;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15vh;
+   bottom: 0;
+}
+.btn_pagenation li{
+  
+ 
+}
+.btn_pagenation input {
+  display: block;
+  appearance: none;
+  border-radius: 50%;
+  width: 0.5rem;
+  height: 0.5rem;
+  accent-color: #fff;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 3px 7px;
+  /* box-sizing: content-box; */
+}
+.btn_pagenation input:checked{
+  display: block;
+  border: 2px solid #fff;
+
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: transparent;
+
+}
+
+/* .slide_item:nth-child(1){
+  background-image: url(./img/main1.jpg);
+}
+.slide_item:nth-child(2){
+  background-image: url(./img/main2.jpg);
+}
+.slide_item:nth-child(3){
+  background-image: url(./img/main3.jpg);
+}
+.slide_item:nth-child(4){
+  background-image: url(./img/main4.jpg);}
+.slide_item:nth-child(5){
+  background-image: url(./img/main5.jpg);}
+.slide_item:nth-child(6){
+  background-image: url(./img/main6.jpg);}
+.slide_item:nth-child(7){
+  background-image: url(./img/main7.jpg);}
+.slide_item:nth-child(8){
+  background-image: url(./img/main8.jpg);} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* --------------------------- */
 @media screen and (max-width: 1599px) {
