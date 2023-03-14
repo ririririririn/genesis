@@ -1,8 +1,7 @@
 /* 기본 스타일 제거 */
 h1,
 body,
-ul,
-l {
+ul {
   margin: 0;
   padding: 0;
 }
@@ -13,60 +12,73 @@ a {
 ul {
   list-style: none;
 }
+
 /* 폰트 */
-*{font-family: 'Noto Sans KR', sans-serif;}
-/* navbar */
-.header {
-  background-color: black;
-  color: #bbbbbb;
-  font-size: 15px;
+* {
+  font-family: "Noto Sans KR", sans-serif;
 }
+
+/* 아이콘 숨김  */
+.blind {
+  display: none;
+}
+
+/* header -------------------------- */
+.header {
+  background-color: black; /* header 배경색 */
+  color: #bbbbbb; /* header 폰트색 */
+  font-size: 15px; /* header 폰트 사이즈 */
+}
+/* navbar 레이아웃 */
 .navbar {
   display: flex; /* 가로로 정렬 */
   justify-content: space-between; /* 좌우 끝으로 */
-  align-items: center; /* 세로 간격 맞춤 */
-  padding: 10px 40px; /* navbar 여백 */
-  
+  align-items: center; /* 세로 가운데로 */
+  padding: 0px 120px; /* navbar 여백 */
 }
-
+/* navbar 좌측--------------------- */
 .gnb {
-  display: flex;
-  align-items: center;
+  display: flex; /* 로고와 ul 가로 정렬 */
+  align-items: center; /* logo와 ul 세로 가운데로 */
 }
 /* 로고 */
 .logo {
-  margin-right: 20px; /* 메뉴와 간격주기 */
+  margin-right: 20px; /* logo와 ul 간격벌리기 */
 }
 .logo img {
   width: 120px;
-  display: block; /* 이미지 공백 제거 */
+  display: block; /* img 공백 제거 */
 }
 
 /* nav_menu */
 .nav_menu {
-  display: flex;
+  display: flex; /* li 가로 정렬 */
 }
 .nav_menu li a {
-  display: block; /*  */
-  padding: 20px 20px; /* 마우스 터치 쉽게 */
+  display: block; /* a block ? */
+  padding: 20px; /* a 마우스 터치 쉽게 공간 만들기 & 크기 키우기 */
+  transition: color 0.5s;
 }
-
-/* nav_icons */
+a:hover {
+  color: white;
+}
+/* ------------------------------- */
+/* navbar 우측*/
 .nav_icons {
-  display: flex;
-  align-items: center;
+  display: flex; /* li 가로 정렬 */
+  align-items: center; /* li 세로 가운데로  */
 }
 
 .text_service,
 .text_mypage,
-.icon_search,
 .hamburger {
-  display: block; /*  */
-  padding: 20px;
+  display: block; /* a block */
+  padding: 20px; /* a 값에 패딩 */
 }
 
-.icon_search{
-  padding-right: 5px;
+.icon_search {
+  /* background-color: red; */
+  margin-left: 20px;
 }
 .icon_search::after {
   content: "";
@@ -75,59 +87,64 @@ ul {
   width: 1px;
   height: 20px;
   background-color: #454545;
-  margin-left: 25px;
-
+  margin-left: 30px;
+  margin-right: 10px;
 }
 
 .nav_icons i {
-  font-size: 18px;
-  color: white;
+  font-size: 18px; /* 폰트어썸 아이콘 사이즈 */
+  color: white; /* 폰트어썸 컬러 */
 }
 
-/* 아이콘 숨김  */
-.blind {
-  display: none;
-}
 /* 햄버거 버튼 */
 
-.hamburgur {
-}
-
 .line_wrap {
+  /* .line 선 위치 잡기 위해 relative */
+  position: relative;
+  /*  line_wrap 크기 지정 */
   width: 25px;
   height: 25px;
-
-  position: relative;
 }
 .line {
-  display: block;
-  position: absolute;
+  display: block; /* 높이와 너비 지정 위해!! */
+  position: absolute; /* 선 위치 잡기 위해 */
   width: 100%;
   height: 3px;
   background-color: #fff;
   border-radius: 1px;
- transition: all 1s;
-  
+  transition: transform 0.3s;
+  /* all을 하면 스르르 나타남 왜?? */
 }
 .line1 {
   top: 5.5px;
+  /* line1 위치 지정 */
 }
 .line2 {
   bottom: 5.5px;
+  /* line2 위치 지정 */
 }
 
 /* 햄버거 active */
 
-.active_hbgbtn1{
+.active_hbgbtn1 {
   transform: translateY(5.5px) rotate(45deg);
 }
-.active_hbgbtn2{
-  transform:translateY(-5.5px) rotate(-45deg);
+.active_hbgbtn2 {
+  transform: translateY(-5.5px) rotate(-45deg);
 }
 
-
+/* --------------------------- */
+@media screen and (max-width: 1599px) {
+  .navbar {
+    padding: 0px 100px;
+  }
+}
 @media screen and (max-width: 1359px) {
-  navbar_메뉴 아이콘 .nav_icons li a {
+  .navbar {
+    padding: 0px 76px;
+  }
+  /*   navbar_메뉴 아이콘  */
+  .nav_icons li a {
     padding: 20px 10px;
   }
 
@@ -142,7 +159,11 @@ ul {
   }
 
   .icon_search {
-    padding: 20px 10px;
+    margin-left: 0;
+  }
+  .icon_search::after {
+    margin-left: 20px;
+    margin-right: 5px;
   }
 }
 
